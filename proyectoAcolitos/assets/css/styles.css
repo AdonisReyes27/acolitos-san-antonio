@@ -1,0 +1,316 @@
+/* ===== Variables CSS ===== */
+:root {
+    --color-primary: #d79682;
+    --color-secondary: #ff5722;
+    --color-background: #f4f4f4;
+    --color-text: #333;
+    --shadow-default: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* ===== Estilos generales ===== */
+body {
+    background-image: url('../images/fondo.jpg'); /* Exclusivo Texto 1 */
+    background-size: cover; /* Exclusivo Texto 1 */
+    background-position: center; /* Exclusivo Texto 1 */
+    background-repeat: no-repeat; /* Exclusivo Texto 1 */
+    background-attachment: fixed; /* Exclusivo Texto 1 */
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: var(--color-text);
+    line-height: 1.6;
+}
+
+/* ===== Header y navegación ===== */
+header {
+    background-color: var(--color-primary);
+    color: #333;
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: var(--shadow-default);
+}
+
+nav a {
+    color: #333;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #bab9ac;
+}
+
+/* ===== Contenedor principal ===== */
+main {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-bottom: 50px;
+    background-color: rgba(255, 255, 255, 0.9); /* Exclusivo Texto 1 */
+    border-radius: 10px; /* Exclusivo Texto 1 */
+    box-shadow: var(--shadow-default); /* Exclusivo Texto 1 */
+}
+
+/* ===== Secciones ===== */
+section {
+    margin-bottom: 40px;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: var(--shadow-default);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+section:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px);
+}
+
+h2 {
+    color: var(--color-primary);
+    margin-top: 0;
+    font-size: 24px;
+    border-bottom: 2px solid var(--color-primary);
+    padding-bottom: 10px;
+}
+
+/* ===== Listas ===== */
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    background-color: #e0f7fa;
+    margin: 10px 0;
+    padding: 10px;
+    border-left: 5px solid var(--color-primary);
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+ul li:hover {
+    background-color: #b2ebf2;
+}
+
+/* ===== Testimonios (Exclusivo Texto 1) ===== */
+blockquote {
+    background-color: #e8f5e9;
+    padding: 15px;
+    border-left: 5px solid var(--color-primary);
+    margin: 20px 0;
+    font-style: italic;
+    border-radius: 10px;
+    position: relative;
+}
+
+blockquote footer {
+    display: block;
+    margin-top: 15px;
+    font-weight: bold;
+    text-align: right;
+    color: var(--color-primary);
+    font-style: normal;
+    font-size: 14px;
+    background-color: #e8f5e9;
+    padding: 10px;
+    border-radius: 0 0 10px 10px;
+    margin: 15px -15px -15px -15px;
+}
+
+blockquote::before,
+blockquote::after {
+    display: none;
+}
+
+/* ===== Galería (Exclusivo Texto 1) ===== */
+.gallery {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.gallery img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    transition: transform 0.3s ease;
+    border-radius: 10px;
+    box-shadow: var(--shadow-default);
+}
+
+.gallery img:hover {
+    transform: scale(1.2);
+    z-index: 1;
+}
+
+/* ===== Botón de unirse (Exclusivo Texto 1) ===== */
+.join-button {
+    display: inline-block;
+    background-color: var(--color-secondary);
+    color: white;
+    padding: 12px 24px;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 25px;
+    border: 2px solid #e64a19;
+    transition: all 0.3s ease, transform 0.2s ease;
+    box-shadow: var(--shadow-default);
+    cursor: pointer;
+}
+
+.join-button:hover {
+    background-color: #e64a19;
+    border-color: var(--color-secondary);
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.join-button:active {
+    transform: translateY(0) scale(0.95);
+}
+
+.join-button i {
+    margin-right: 8px;
+}
+
+/* ===== Formulario de contacto (Exclusivo Texto 2) ===== */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group textarea {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: var(--color-primary);
+    box-shadow: 0 0 5px rgba(76, 175, 80, 0.5);
+    outline: none;
+}
+
+/* ===== Botón del formulario (Exclusivo Texto 2) ===== */
+.form-button {
+    display: inline-block;
+    background-color: var(--color-secondary);
+    color: white;
+    padding: 12px 24px;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 25px;
+    border: 2px solid #e64a19;
+    transition: all 0.3s ease, transform 0.2s ease;
+    box-shadow: var(--shadow-default);
+    cursor: pointer;
+    text-align: center;
+}
+
+.form-button:hover {
+    background-color: #e64a19;
+    border-color: var(--color-secondary);
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.form-button:active {
+    transform: translateY(0) scale(0.95);
+}
+
+/* ===== Mapa (Exclusivo Texto 2) ===== */
+iframe {
+    width: 100%;
+    height: 450px;
+    border: none;
+    border-radius: 10px;
+    box-shadow: var(--shadow-default);
+    transition: box-shadow 0.3s ease;
+}
+
+iframe:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* ===== Footer ===== */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 40px;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* ===== Diseño responsive ===== */
+@media (max-width: 600px) {
+    .gallery img {
+        width: 100%;
+        height: auto;
+        margin-bottom: 10px;
+    }
+
+    .join-button,
+    .form-button {
+        width: 100%;
+        text-align: center;
+    }
+
+    nav a {
+        display: block;
+        margin: 10px 0;
+    }
+
+    iframe {
+        height: 300px;
+    }
+}
+
+/* Estilos básicos para la tabla */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+
+/* Estilos adicionales para mejorar la apariencia */
+section {
+    margin: 20px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
